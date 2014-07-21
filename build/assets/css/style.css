@@ -1,0 +1,52 @@
+* {
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	font-smoothing: antialiased;
+}
+
+.container {
+	font-family: 'Antic Slab', serif;
+	background: #87CEEB;
+	padding:10px;
+}
+
+.form-body {
+	max-width: 1400px;
+	margin:0 auto;
+	background: #fafafa;
+	border-radius: 10px;
+}
+
+header {
+	background: #00688B;
+}
+
+.h1 {
+	font-size: 70px;
+	padding:20px 0;
+	color:#fff;
+}
+
+.h4 {
+	font-size: 15px;
+	padding:0 0 40px 0;
+	color:#87CEEB;
+	font-weight: bolder;
+}
+
+.h2 {
+	font-size: 35px;
+
+}
+
+.number {
+	display: inline;
+	font-size: 35px;
+}
+
+
+/* objects */
+
+.contain {
+	padding:0 50px;
+}
