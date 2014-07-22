@@ -2,48 +2,143 @@
 	-webkit-font-smoothing:antialiased;
 	-moz-font-smoothing:antialiased;
 	font-smoothing: antialiased;
+	box-sizing: border-box;
+
 }
 
 .container {
 	font-family: 'Antic Slab', serif;
-	background: #87CEEB;
+	background: #B0E2FF;
 	padding:10px;
 }
 
 .form-body {
-	max-width: 1400px;
+	max-width: 900px;
 	margin:0 auto;
 	background: #fafafa;
 	border-radius: 10px;
 }
 
+.note {
+	color:#b0b0b0;
+	font-weight: bold;
+	display: block;
+	padding: 10px 0;
+}
+
+/* global */
+
 header {
 	background: #00688B;
+	background:    -webkit-linear-gradient(#6996AD, #00688B);
+	background:    -o-linear-gradient(#6996AD, #00688B);
+	background:    linear-gradient(#6996AD, #00688B);
 }
 
 .h1 {
 	font-size: 70px;
 	padding:20px 0;
 	color:#fff;
+	letter-spacing: -2px;
+	font-weight: bold;
 }
 
 .h4 {
 	font-size: 15px;
 	padding:0 0 40px 0;
-	color:#87CEEB;
+	color:#B0E2FF;
 	font-weight: bolder;
 }
 
 .h2 {
 	font-size: 35px;
+	background: #fafafa;
+	padding:20px 0;
+	color: #00688B;
+	font-weight: bold;
+	letter-spacing: -1px;
 
 }
 
-.number {
-	display: inline;
-	font-size: 35px;
+/* form elements */
+
+form {
+	border: 1px solid #c6c7cc;
+	border-radius: 5px;
+	overflow: hidden;
+	width: 740px;
+	background: #f5f5f5;
 }
 
+.form {
+	margin:0 auto;
+	margin-top:50px;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	border-radius: 5px;
+	margin: 0;
+}
+
+.form-padding {
+	padding:20px 60px 60px 60px;
+}
+
+.form-padding label {
+	display: block;
+	margin:20px 0 10px 0;
+	padding:10px 0;
+}
+
+.form-padding input {
+	background: #fff;
+	border: 1px solid #c6c7cc;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+	padding: 18px;
+	width: 100%;
+}
+
+.dropdowns {
+	padding: 10px 0;
+	margin:0;
+}
+
+#dropdowns {
+	position: relative;
+	left: -3px;
+}
+
+#checkbox {
+-webkit-transform:scale(1,2);
+-icab-transform:scale(1,2);
+-moz-transform:scale(1,2);
+-ms-transform:scale(1,2);
+-o-transform:scale(1,2);
+transform:scale(1,2);
+width: 20px;
+margin:20px 0;
+}
+
+.createbutton {
+	text-align: center;
+	padding:30px 0;
+	margin-bottom:20px;
+}
+
+.btn {
+	height: 50px;
+	width: 250px;
+	margin:0 auto;
+	color:#fafafa;
+	background: #629632;
+	font-size: 20px;
+}
 
 /* objects */
 
