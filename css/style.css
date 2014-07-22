@@ -30,9 +30,9 @@
 
 header {
 	background: #00688B;
-	background:    -webkit-linear-gradient(#6996AD, #00688B);
-	background:    -o-linear-gradient(#6996AD, #00688B);
-	background:    linear-gradient(#6996AD, #00688B);
+	background: -webkit-linear-gradient(#6996AD, #00688B);
+	background: -o-linear-gradient(#6996AD, #00688B);
+	background: linear-gradient(#6996AD, #00688B);
 }
 
 .h1 {
@@ -51,7 +51,7 @@ header {
 }
 
 .h2 {
-	font-size: 35px;
+	font-size: 30px;
 	background: #fafafa;
 	padding:20px 0;
 	color: #00688B;
@@ -66,7 +66,7 @@ form {
 	border: 1px solid #c6c7cc;
 	border-radius: 5px;
 	overflow: hidden;
-	width: 740px;
+	max-width: 740px;
 	background: #f5f5f5;
 }
 
@@ -88,6 +88,7 @@ input {
 
 .form-padding {
 	padding:20px 60px 60px 60px;
+	position: relative;
 }
 
 .form-padding label {
@@ -100,7 +101,7 @@ input {
 	background: #fff;
 	border: 1px solid #c6c7cc;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
-	padding: 18px;
+	padding: 12px;
 	width: 100%;
 }
 
@@ -114,15 +115,12 @@ input {
 	left: -3px;
 }
 
-#checkbox {
--webkit-transform:scale(1,2);
--icab-transform:scale(1,2);
--moz-transform:scale(1,2);
--ms-transform:scale(1,2);
--o-transform:scale(1,2);
-transform:scale(1,2);
-width: 20px;
-margin:20px 0;
+#cardnumber {
+	width: 70%;
+}
+
+#security {
+	width: 20%;
 }
 
 .createbutton {
@@ -138,10 +136,66 @@ margin:20px 0;
 	color:#fafafa;
 	background: #629632;
 	font-size: 20px;
+	font-family: 'Antic Slab', serif;
+	font-weight: bolder;
 }
+
+.paypal {
+	float: right;
+	width: 150px;
+	font-size: 15px;
+	line-height: 40px;
+	padding-left: 60px;
+	text-decoration: none;
+	color:#B0E2FF;
+	font-family:  Lucida Grande, Arial, Verdana, sans-serif;
+ }
+
+.paypal:hover {
+	color:#00688B;
+}
+
+/*sprites*/
+
+#cards {
+	background: url('../img/sprite.png') no-repeat 10px -120px;
+	width: 200px;
+	height: 33px;
+	position: absolute;
+	overflow: hidden;
+}
+
+#cards:hover {
+	background: url('../img/sprite.png') no-repeat 10px -162px;
+	width: 200px;
+	height: 33px;
+	position: absolute;
+	overflow: hidden;
+}
+
+#code {
+	background: url('../img/sprite.png') no-repeat 8px -372px
+	width: 70px;
+	height: 33px;
+	position: absolute;
+	overflow: hidden;
+}
+
+#code:hover {
+	background: url('../img/sprite.png') no-repeat 10px -162px;
+	width: 200px;
+	height: 33px;
+	position: absolute;
+	overflow: hidden;
+}
+
+
+
 
 /* objects */
 
 .contain {
-	padding:0 50px;
+	padding:0 80px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
 }
