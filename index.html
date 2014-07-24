@@ -4,64 +4,79 @@
 	<meta charset="UTF-8">
 	<link rel='stylesheet' href='css/style.css' />
 	<link rel='stylesheet' href='css/reset.css' />
-	<script src="js/modernizr.js"></script>
-	<script src="js/validate.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+	<script src="js/modernizr.js"></script>
 	<title>Form Challenge!</title>
 </head>
 <body>
 	<div class="container">
 		<div class="form-body">
-			<header class="contain">
+			<header class="contain" role="banner">
 				<h1 class="h1">Sign up for Whoo!</h1>
 				<h4 class="h4">50 Projects, 500 images, 10 videos, domain binding, and technical support.</h4>
 			</header>
+			
+			<form action="#" method="post" class="form">
+				
+				<fieldset>
+					<legend class="legend">First, Name Your Portfolio</legend>
+					<ol>
+						<li>
+							<label for="title">Portfolio Title</label>
+							<input required type="text" name="title" id="title">
+						</li>
 
-			<section>
-				<form action="#" method="post" class="form">
-					<h2 class="h2">First, Name Your Portfolio</h2>
-					<fieldset class="form-padding">
-						<label for="title">Portfolio Title</label>
-						<input type="text" name="title" id="title">
+						<li>
+							<label for "address">Portfolio Address</label>
+							<input required type="url" name="address" id="address">
+						</li>
+					</ol>
+				</fieldset>
+			 
+				<fieldset>
+					<legend class="legend">Now, enter your account details</legend>
+					<ol>
+						<li>
+							<label for"name">Name</label>
+							<input required type="text" name="name" id="name" pattern="[^0-9][A-Za-z]{2,20}">
+						</li>
 
-						<label for="address">Portfolio Address</label>
-						<input type="text" name="address" id="address">
-					</fieldset>
-				</form>
-			</section>
+						<li>
+							<label for="email">Email</label>
+							<input required type="email" name="email" id="email">
+							<span class="note">NOTE: We'll never share your email, promise.</span>
+						</li>
 
-			<section>
-				<form action="#" method="post" class="form">
-					<h2 class="h2">Now, enter your account details</h2>
-					<fieldset class="form-padding">
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name">
-
-						<label for="email">Email</label>
-						<input type="text" name="email" id="email">
-						<span class="note">NOTE: We'll never share your email, promise.</span>
-
-						<label for="password">Password</label>
-						<input type="password" name="password" id="password">
-						<input type="checkbox" name="showpassword" value="show" id="checkbox"> Show Password
-					</fieldset>
-				</form>
-			</section>
-
-			<section>
-				<form action="#" method="post" class="form">
-					<h2 class="h2">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></h2>
-					<fieldset class="form-padding">
-						<label for="cardnumber">Card number</label>
-						<input type="text" name="cardnumber" id="cardnumber">
-						<a href="#" id="cards">dude</a>
-
-						<label for="security">Security code</label>
-						<input type="text" name="security" id="security">
-						<a href="#" id="code"></a>
-
-						<div class="dropdowns">
-							<label for="expiration">Expiration date</label>
+						<li>
+							<label for="password">Password</label>
+							<input required type="password" name="password" id="password">
+							<input required type="checkbox" name="showpassword" value="show" id="checkbox"> Show Password
+						</li>	
+					</ol>		
+				</fieldset>
+			 
+				<fieldset>
+					<legend class="legend">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></legend>
+					<ol>
+						<li>
+							<label for="number">Card number</label>
+							<input required type="text" name="number" id="number">
+							<ol class="cards">
+								<li class="cards-list1"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="AMEX" checked></a>AMEX</li>
+								<li class="cards-list2"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="Visa"></a>Visa</li> 
+								<li class="cards-list3"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="Mastercard"></a>MasterCard<li> 
+								<li class="cards-list4"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="Discover"></a>Discover</li> 
+							</ol>
+						</li>
+						
+						<li>
+							<label for="security">Security code</label>
+							<input required type="text" name="security" id="security" maxlength="4">
+						</li>
+					</ol>
+					
+					<div class="dropdowns">
+						<label for="dropdown">Expiration date</label>
 							<select name="month" id="dropdowns">
 								<option value="Month" selected>Month</option>
 								<option value="January">January</option>
@@ -78,23 +93,23 @@
 								<option value="December">December</option>
 							</select>
 
-							<select name="year" id="dropdowns">
-								<option value="Year" selected>Year</option>
-								<option value="2014">2014</option>
-							</select>
-						</div>
-					</fieldset>
-				</form>
-			</section>
+						<select name="year" id="dropdowns">
+							<option value="Year" selected>Year</option>
+							<option value="2014">2014</option>
+						</select>
+					</div>
+				</fieldset>
+			 
+				 
+				<div class="button">
+					<input class="btn" type="submit" name="submit" value="Create your portfolio">
+				</div>
 
-			<section>
-				<fieldset class="createbutton">
-    				<input class="btn" type="submit" name="submit" value="Create your portfolio">
-    			</fieldset>
-			</section>
+			</form><!--end form-->
 		</div><!--end form body-->
 	</div><!--end container-->
-<script src="js/main.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/main.js"></script>	
 </body>
 </html>
