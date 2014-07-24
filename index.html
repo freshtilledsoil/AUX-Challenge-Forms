@@ -17,90 +17,95 @@
 			</header>
 			
 			<form action="#" method="post" class="form">
-				
-				<fieldset>
-					<legend class="legend">First, Name Your Portfolio</legend>
-					<ol>
-						<li>
+
+				<ol>
+					<li>
+						<fieldset>
+							<legend class="legend">First, Name Your Portfolio</legend>
 							<label for="title">Portfolio Title</label>
 							<input required type="text" name="title" id="title">
-						</li>
 
-						<li>
-							<label for "address">Portfolio Address</label>
+							<label for="address">Portfolio Address</label>
 							<input required type="url" name="address" id="address">
-						</li>
-					</ol>
-				</fieldset>
-			 
-				<fieldset>
-					<legend class="legend">Now, enter your account details</legend>
-					<ol>
-						<li>
-							<label for"name">Name</label>
-							<input required type="text" name="name" id="name" pattern="[^0-9][A-Za-z]{2,20}">
-						</li>
+						</fieldset>
+					</li>
 
-						<li>
+					<li>
+						<fieldset>
+							<legend class="legend">Now, enter your account details</legend>
+							<label for="name">Name</label>
+							<input required type="text" name="name" id="name" pattern="[^0-9][A-Za-z]{2,20}">
+
 							<label for="email">Email</label>
 							<input required type="email" name="email" id="email">
 							<span class="note">NOTE: We'll never share your email, promise.</span>
-						</li>
 
-						<li>
 							<label for="password">Password</label>
-							<input required type="password" name="password" id="password">
-							<input required type="checkbox" name="showpassword" value="show" id="checkbox"> Show Password
-						</li>	
-					</ol>		
-				</fieldset>
-			 
-				<fieldset>
-					<legend class="legend">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></legend>
-					<ol>
-						<li>
-							<label for="number">Card number</label>
-							<input required type="text" name="number" id="number">
-							<ol class="cards">
-								<li class="cards-list1"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="AMEX" checked></a>AMEX</li>
-								<li class="cards-list2"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="Visa"></a>Visa</li> 
-								<li class="cards-list3"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="Mastercard"></a>MasterCard<li> 
-								<li class="cards-list4"><a href="#"><input required pattern="^d{4}-d{4}-d{4}" type="radio" name="cardnumber" value="Discover"></a>Discover</li> 
-							</ol>
-						</li>
-						
-						<li>
-							<label for="security">Security code</label>
-							<input required type="text" name="security" id="security" maxlength="4">
-						</li>
-					</ol>
-					
-					<div class="dropdowns">
-						<label for="dropdown">Expiration date</label>
-							<select name="month" id="dropdowns">
-								<option value="Month" selected>Month</option>
-								<option value="January">January</option>
-								<option value="February">February</option>
-								<option value="March">March</option>
-								<option value="April">April</option>
-								<option value="May">May</option>
-								<option value="June">June</option>
-								<option value="July">July</option>
-								<option value="August">August</option>
-								<option value="September">September</option>
-								<option value="October">October</option>
-								<option value="November">November</option>
-								<option value="December">December</option>
-							</select>
+							<input required type="password" name="password" id="password">  
+						</fieldset>
+					</li>
 
-						<select name="year" id="dropdowns">
-							<option value="Year" selected>Year</option>
-							<option value="2014">2014</option>
-						</select>
-					</div>
-				</fieldset>
-			 
-				 
+					<li>
+						<fieldset>
+							<legend class="legend">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></legend>
+							<label for="number">Card number</label>
+							<input required type="text" name="number" id="number" pattern="[0-9]{13,16}">
+
+							<fieldset>
+                                <ul class="card-list">
+                                    <li class="amex">
+                                    	<label for="amex">American Express</label>
+                                        <input type="radio" name="card" id="amex" />
+                                    </li>
+                                    <li class="visa">
+                                    	<label for="visa">Visa</label>
+                                        <input type="radio" name="card" id="visa" />
+                                    </li> 
+                                    <li class="discover">
+                                    	<label for="discover">Discover</label>
+                                        <input type="radio" name="card" id="discover" />
+                                    </li>
+                                    <li class="mastercard">
+                                    	<label for="mastercard">Mastercard</label>
+                                        <input type="radio" name="card" id="mastercard" />
+                                    </li>
+                                </ul>
+                            </fieldset>
+
+                            <label for="security">Security code</label>
+							<input required type="text" name="security" id="security" maxlength="4">
+							<div id="security-icon"></div>
+
+							<div class="dropdowns">
+								<label for="dropdown">Expiration date</label>
+								<select name="month" id="dropdowns">
+									<option value="00" disabled selected>Month</option>
+									<option value="01">January</option>
+									<option value="02">February</option>
+									<option value="03">March</option>
+									<option value="04">April</option>
+									<option value="05">May</option>
+									<option value="06">June</option>
+									<option value="07">July</option>
+									<option value="08">August</option>
+									<option value="09">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								</select>
+
+								<select name="year" id="dropdowns">
+									<option value="00" disabled selected>Year</option>
+									<option value="01">2014</option>
+									<option value="02">2015</option>
+									<option value="03">2016</option>
+									<option value="04">2017</option>
+								</select>
+							</div>
+						</fieldset>
+					</li>
+				</ol>
+					 
 				<div class="button">
 					<input class="btn" type="submit" name="submit" value="Create your portfolio">
 				</div>
