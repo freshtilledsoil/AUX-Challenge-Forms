@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class=“no-js”>
 <head>
 	<meta charset="UTF-8">
 	<link rel='stylesheet' href='css/style.css' />
@@ -22,59 +22,79 @@
 					<li>
 						<fieldset>
 							<legend class="legend">First, Name Your Portfolio</legend>
-							<label for="title">Portfolio Title</label>
-							<input required type="text" name="title" id="title">
+							
+							<div>
+								<label for="title">Portfolio Title</label>
+								<input required type="text" name="title" id="title" autofocus>
+							</div>
+							
+							<div>
+								<label for="address">Portfolio Address</label>
+								<input required type="url" name="address" id="address">
+								<input required type="text" id="sample" name="sample" value=".sample.com" disabled />
+							</div>
 
-							<label for="address">Portfolio Address</label>
-							<input required type="url" name="address" id="address">
 						</fieldset>
 					</li>
 
 					<li>
 						<fieldset>
 							<legend class="legend">Now, enter your account details</legend>
-							<label for="name">Name</label>
-							<input required type="text" name="name" id="name" pattern="[^0-9][A-Za-z]{2,20}">
+							
+							<div>
+								<label for="name">Name</label>
+								<input required type="text" name="name" id="name" pattern="[a-zA-Z0-9]+">
+							</div>
+							
+							<div>
+								<label for="email">Email</label>
+								<input required type="email" name="email" id="email">
+								<span class="note">NOTE: We'll never share your email, promise.</span>
+							</div>
+							
+							<div>
+								<label for="password">Password</label>
+								<input required type="password" name="password" id="password"> 
+							</div> 
 
-							<label for="email">Email</label>
-							<input required type="email" name="email" id="email">
-							<span class="note">NOTE: We'll never share your email, promise.</span>
-
-							<label for="password">Password</label>
-							<input required type="password" name="password" id="password">  
 						</fieldset>
 					</li>
 
 					<li>
 						<fieldset>
 							<legend class="legend">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></legend>
-							<label for="number">Card number</label>
-							<input required type="text" name="number" id="number" pattern="[0-9]{13,16}">
+							
+							<div>
+								<label for="number">Card number</label>
+								<input required type="text" name="number" id="number" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="[0-9]{13,16}" maxlength="16" title="No more than 16 characters">
+							</div>
 
-							<fieldset>
+							<fieldset class="remove-padding">
                                 <ul class="card-list">
                                     <li class="amex">
-                                    	<label for="amex">American Express</label>
                                         <input type="radio" name="card" id="amex" />
+                                        <label for="amex">American Express</label>
                                     </li>
                                     <li class="visa">
-                                    	<label for="visa">Visa</label>
                                         <input type="radio" name="card" id="visa" />
+                                        <label for="visa">Visa</label>
                                     </li> 
                                     <li class="discover">
-                                    	<label for="discover">Discover</label>
                                         <input type="radio" name="card" id="discover" />
+                                        <label for="discover">Discover</label>
                                     </li>
                                     <li class="mastercard">
-                                    	<label for="mastercard">Mastercard</label>
                                         <input type="radio" name="card" id="mastercard" />
+                                        <label for="mastercard">Mastercard</label>
                                     </li>
                                 </ul>
                             </fieldset>
-
-                            <label for="security">Security code</label>
-							<input required type="text" name="security" id="security" maxlength="4">
-							<div id="security-icon"></div>
+							
+							<div>
+	                            <label for="security">Security code</label>
+								<input required type="text" name="security" id="security" maxlength="4">
+								<div id="security-icon"></div>
+							</div>
 
 							<div class="dropdowns">
 								<label for="dropdown">Expiration date</label>
@@ -105,7 +125,7 @@
 						</fieldset>
 					</li>
 				</ol>
-					 
+
 				<div class="button">
 					<input class="btn" type="submit" name="submit" value="Create your portfolio">
 				</div>
