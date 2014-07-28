@@ -25,12 +25,12 @@
 							
 							<div>
 								<label for="title">Portfolio Title</label>
-								<input required type="text" name="title" id="title" autofocus>
+								<input required type="text" name="title" id="title" title="Make it something creative" autofocus>
 							</div>
 							
 							<div>
 								<label for="address">Portfolio Address</label>
-								<input required type="url" name="address" id="address">
+								<input required type="url" name="address" id="address" title="Must start with 'http'">
 								<input required type="text" id="sample" name="sample" value=".sample.com" disabled />
 							</div>
 
@@ -43,18 +43,18 @@
 							
 							<div>
 								<label for="name">Name</label>
-								<input required type="text" name="name" id="name" pattern="[a-zA-Z0-9]+">
+								<input required type="text" name="name" id="name" pattern="[a-zA-Z0-9]+" title="You have a name, don't you?">
 							</div>
 							
 							<div>
 								<label for="email">Email</label>
-								<input required type="email" name="email" id="email">
+								<input required type="email" name="email" id="email" title="You must provide a valid email address">
 								<span class="note">NOTE: We'll never share your email, promise.</span>
 							</div>
 							
 							<div>
 								<label for="password">Password</label>
-								<input required type="password" name="password" id="password"> 
+								<input required type="password" name="password" id="password" title="Must be at least four characters" minlength="4"> 
 							</div> 
 
 						</fieldset>
@@ -92,7 +92,7 @@
 							
 							<div>
 	                            <label for="security">Security code</label>
-								<input required type="text" name="security" id="security" maxlength="4">
+								<input required type="text" name="security" id="security" maxlength="4" title="On the back of your card">
 								<div id="security-icon"></div>
 							</div>
 
