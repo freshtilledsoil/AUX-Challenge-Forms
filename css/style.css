@@ -38,8 +38,6 @@ header {
 }
 
 ol {
-	margin:0;
-	padding:0;
 	counter-reset:li; /* Initiate a counter */
     margin-left:0; /* Remove the default left margin */
     padding-left:0; /* Remove the default left padding */
@@ -54,10 +52,17 @@ ol > li {
 ol > li:before {
 	content:counter(li);
 	counter-increment: li;
-	border:4px solid white;
-	background-color: blue;
-	border-radius: 5px;
-	padding:15px;
+	border:5px solid white;
+	background-color: #52a3d4;
+	border-radius: 20px;
+ 	position: absolute;
+ 	height: 30px;
+ 	width: 30px;
+ 	color:#fff;
+ 	font-weight: bold;
+ 	left: -20px;
+	top: -10px;
+	text-align: center;
 }
 
 ol, ul {
@@ -71,7 +76,7 @@ ol, ul {
 
 
 .h1 {
-	font-size: 40px;
+	font-size: 3em;
 	padding:30px 0 0 0;
 	color:#fff;
 	letter-spacing: -2px;
@@ -80,7 +85,7 @@ ol, ul {
 }
 
 .h4 {
-	font-size: 12px;
+	font-size: .8em;
 	padding:0 0 15px 0;
 	color:#B0E2FF;
 	font-weight: bolder;
@@ -100,7 +105,6 @@ ol, ul {
 
 form {
 	border-radius: 5px;
-	overflow: hidden;
 }
 
 .form {
@@ -114,7 +118,6 @@ fieldset {
 	background: #f5f5f5;
 	position: relative;
 	border-radius:12px;
-	
 }
 
 fieldset > div {
@@ -139,17 +142,11 @@ input {
 
 .dropdowns {
 	margin:0;
-	padding-top: 50px;
 }
 
 #dropdowns {
 	position: relative;
 	left: -3px;
-}
-
-#number {
-	width: 50%;
-	display: block;
 }
 
 #security {
@@ -158,7 +155,6 @@ input {
 
 .btn {
 	height: 40px;
-	width: 250px;
 	padding:5px 0;
 	color:#fafafa;
 	font-size: 18px;
@@ -166,23 +162,27 @@ input {
 	font-weight: bolder;
 	margin:0 auto;
 	cursor: pointer;
-	background: #659D32;
-
-	-moz-box-shadow: inset 0 0 1px 0 #fff;
-	-webkit-box-shadow: inset 0 0 1px 0 #fff;
-	box-shadow: inset 0 0 1px 0 #fff;
+	background: -webkit-linear-gradient(top, #90a933, #7b992b);
+	background: -moz-linear-gradient(top, #90a933, #7b992b);
+	background: -ms-linear-gradient(top, #90a933, #7b992b);
+	background: -o-linear-gradient(top, #90a933, #7b992b);
+	background: linear-gradient(top, #90a933, #7b992b);
+	border: 1px solid #7b992b;
+	-webkit-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
 }
 
 .button {
 	text-align: center;
 	margin:50px 0;
+	width: 250px;
+	margin:0 auto;
+	padding:5px 0 45px 0;
 }
 
 .paypal {
 	font-size: 15px;
-	line-height: 28px;
-	position: relative;
-	left: 102px;
+	margin-left: 100px;
 	text-decoration: none;
 	color:#72d0ff;
 	font-family:  Lucida Grande, Arial, Verdana, sans-serif;
@@ -201,9 +201,9 @@ input {
 }
 
 #sample {
-	float: right;
+	display: inline-block;
 	width: 28%;
-	padding:9px;
+	padding:8px;
 	background: #f2f2f2;
 	border-top-left-radius: 0; 
 	border-bottom-left-radius: 0; 
@@ -212,26 +212,36 @@ input {
 	font-weight: bold;
 	text-align: center;
 	color:#9a9aa0;
+	position: relative;
+	right: 6px;
 }
 
 #address {
 	width: 70%;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+	display: inline-block;
 }
-
 
 	/*sprites*/
 
 .cards {
-	float: right;
-	position: relative;
-	bottom: 80px;
-	right: 20px;
+	margin:0;
+	padding:0;
 }
 
 .card-list li, .card-list li label, .card-list li input {
 	display: inline-block;
+}
+
+.card-list {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	position: re;
+	position: relative;
+	bottom: 20px;
+	left: 20px;
 }
 
 .card-list li > label {
@@ -245,6 +255,12 @@ input {
     padding: 0; 
     background-position: 0 -122px;
     /*image-text replacement*/
+}
+
+#number {
+	width: 50%;
+	float: left;
+	vertical-align: bottom;
 }
 
 
@@ -280,9 +296,6 @@ input {
     background-position: -144px -248px;
 }
 
-
-
-
 input[type="radio"] {
 	position: absolute;
 	left: -9999px;
@@ -292,6 +305,10 @@ input[type="radio"] {
 	background:url('../img/sprite.png') no-repeat 0px -374px;
 	width: 62px;
 	height: 32px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 12px;
+	margin-bottom: 3px;
 }
 
 
@@ -312,26 +329,26 @@ input:required {
 }
 
 input:valid {
-	
+
 }
 
 input:invalid:focus {
-	outline:2px solid red;
-	border-radius:5px;
+ 	border-radius:5px;
 }
 
 input:valid:focus {
 	border-radius:5px;
-	outline:2px solid green;
+ }
+
+ .validInvalid {
+ 	margin-bottom: 30px;
  }
 
 .error {
-	color:red;
 	display: block;
-	font-weight: bold;
 	margin-top:10px;
+	color:red;
 }
-
 	/* objects */
 
 .contain {
@@ -339,3 +356,8 @@ input:valid:focus {
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
+
+input:title {
+	display: none;
+}
+

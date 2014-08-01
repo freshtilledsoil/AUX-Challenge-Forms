@@ -1,5 +1,18 @@
 
-$(document).ready(function() {
+$(document).ready(function(){
+   $("form").validate({
+        errorPlacement: function(error, element) {
+                error.appendTo("label[for="+$(element).attr('id')+"]");
+        },
+        errorElement: "em"
+   });
+   $('form').removeAttr('novalidate');
+});
+
+
+
+
+/*$(document).ready(function() {
   $('form').validate({
     rules: {
       title: {

@@ -20,50 +20,52 @@
 
 				<ol>
 					<li>
-						<legend class="legend contain">First, Name Your Portfolio</legend>
+						<legend class="legend contain" id="portfolioName">First, Name Your Portfolio</legend>
 						<fieldset>	
 							<div>
-								<label for="title">Portfolio Title</label>
-								<input required type="text" name="title" id="title" title="Your portfolio must have a title" autofocus>
+								<label for="title">Portfolio Title<span class="star">*</span></label>
+								<input required type="text" name="title" id="title" aria-labelledby="portfolioName" aria-required="true" autofocus>
+								<div class="validInvald"></div>
 							</div>
 							
 							<div>
-								<label for="address">Portfolio Address</label>
-								<input required type="text" id="sample" name="sample" value=".sample.com" disabled />
-								<input required type="url" name="address" id="address" title="Must start with 'http'">
+								<label for="address">Portfolio Address<span class="star">*</span></label>
+								
+								<input required type="url" name="address" id="address" aria-required="true">
+								<input required type="text" id="sample" name="sample" value=".sample.com" disabled aria-required="true">
 							</div>
 
 						</fieldset>
 					</li>
 
 					<li>
-						<legend class="legend contain">Now, enter your account details</legend>
+						<legend class="legend contain" id="accountDeets">Now, enter your account details</legend>
 						<fieldset>
 							<div>
-								<label for="name">Name</label>
-								<input required type="text" name="name" id="name" pattern="[a-zA-Z0-9]+" title="You have a name, don't you?">
+								<label for="name">Name<span class="star">*</span></label>
+								<input required type="text" name="name" id="name" pattern="[a-zA-Z0-9]+" title="You have a name, don't you?" aria-labelledby="accountDeets" aria-required="true">
 							</div>
 							
 							<div>
-								<label for="email">Email</label>
-								<input required type="email" name="email" id="email" title="You must provide a valid email address">
+								<label for="email">Email<span class="star">*</span></label>
+								<input required type="email" name="email" id="email" title="You must provide a valid email address" aria-describedby="note" aria-required="true">
 								<span class="note">NOTE: We'll never share your email, promise.</span>
 							</div>
 							
 							<div>
-								<label for="password">Password</label>
-								<input required type="password" name="password" id="password" title="Must be at least four characters" minlength="4"> 
+								<label for="password">Password<span class="star">*</span></label>
+								<input required type="password" name="password" id="password" title="Must be at least four characters" minlength="4" aria-required="true"> 
 							</div> 
 
 						</fieldset>
 					</li>
 
 					<li>
-						<legend class="legend contain">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></legend>
+						<legend class="legend contain" id="paymentInfo">Finally, enter your payment information<a href="#" class="paypal">Use Paypal</a></legend>
 						<fieldset>
 							<div>
 								<label for="number">Card number</label>
-								<input required type="text" name="number" id="number" pattern="[0-9]{13,16}" minlength="19" title="No dashes needed">
+								<input required type="text" name="number" id="number" pattern="[0-9]{13,16}" maxlength="16" aria-labelledby="paymentInfo" aria-required="true">
 							</div>
 
 							<div class="cards">
@@ -89,14 +91,14 @@
 							
 							<div>
 	                            <label for="security">Security code</label>
-								<input required type="text" name="security" id="security" maxlength="4" pattern="[0-9]{0,4}" title="On the back of your card">
+								<input required type="text" name="security" id="security" maxlength="4" pattern="[0-9]{0,4}" title="On the back of your card" aria-required="true">
 								<div id="backOfCard"></div>
 								<div id="security-icon"></div>
 							</div>
 
 							<div class="dropdowns">
 								<label for="dropdown">Expiration date</label>
-								<select name="month" id="dropdowns">
+								<select name="month" id="dropdowns" aria-required="true">
 									<option value="00" disabled selected>Month</option>
 									<option value="01">January</option>
 									<option value="02">February</option>
@@ -112,7 +114,7 @@
 									<option value="12">December</option>
 								</select>
 
-								<select name="year" id="dropdowns">
+								<select name="year" id="dropdowns" aria-required="true">
 									<option value="00" disabled selected>Year</option>
 									<option value="01">2014</option>
 									<option value="02">2015</option>
@@ -136,3 +138,8 @@
 <script src="js/main.js"></script>	
 </body>
 </html>
+
+
+<div class="a-thing-just-for-lists">
+	<div class="list-item"></div>
+</div>
